@@ -1,0 +1,37 @@
+/* 根据屏幕宽度自适应内容区域宽度 */
+.main {
+    max-width: min(90vw, 1200px);
+    padding: 0 2rem;
+}
+
+/* 小屏幕（手机）*/
+@media (max-width: 768px) {
+    .main {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+/* 中等屏幕（平板）*/
+@media (min-width: 769px) and (max-width: 1200px) {
+    .main {
+        max-width: 85vw;
+    }
+}
+
+/* 大屏幕（桌面 / 宽显示器）*/
+@media (min-width: 1201px) {
+    .main {
+        max-width: 1100px;
+    }
+}
+
+/* 字体大小随屏幕自适应 */
+body {
+    font-size: clamp(15px, 1.1vw, 18px);
+}
+
+/* 文章正文行距优化 */
+.post-content {
+    line-height: 1.8;
+}
